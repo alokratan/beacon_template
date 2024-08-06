@@ -18,7 +18,7 @@ const VibrantTypography = styled(Typography)(({ theme }) => ({
 }));
 
 const carouselItems = [
-  { bgColor: '#FF6B6B', image: img1, text: 'Buy 2 Get 1 Free' },
+  { bgColor: '#FF6B6B', image: img1},
   // { bgColor: '#4ECDC4', image: img2, text: 'Pet Clothes' },
   // { bgColor: '#45B7D1', image: img3, text: 'Food Items' },
   // { bgColor: '#FF6B6B', image: img4, text: 'Buy 1 Get 1 Free' },
@@ -56,7 +56,7 @@ const Buy2Get1FreeComponent = () => {
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: item.bgColor,
-            backgroundImage: `url(${item.image})`,
+            backgroundImage: url(`${item.image}`),
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             padding: isMobile ? theme.spacing(2) : theme.spacing(4),
@@ -91,15 +91,15 @@ const Buy2Get1FreeComponent = () => {
             }}
           >
             <VibrantTypography
-              variant={isMobile ? "h4" : "h2"}
-              color="black"
+              variant={isMobile ? "h4" : "h3"}
+              color="red"
               gutterBottom
             >
               SPECIAL OFFER!
             </VibrantTypography>
             <VibrantTypography
-              variant={isMobile ? "h3" : "h1"}
-              color="white"
+              variant={isMobile ? "h3" : "h2"}
+              color="black"
               gutterBottom
             >
               {offerText}
@@ -109,7 +109,7 @@ const Buy2Get1FreeComponent = () => {
               color="black"
               gutterBottom
             >
-              {item.text} - {offerData}
+              {item.text}  {offerData}
             </VibrantTypography>
             <Button
               variant="contained"

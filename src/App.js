@@ -95,7 +95,7 @@ function App() {
       <Box
         sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
       >
-        <Header beaconInfo={beaconInfo} />
+        {/* <Header beaconInfo={beaconInfo} /> */}
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
